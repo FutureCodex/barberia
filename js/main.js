@@ -1,3 +1,54 @@
+
+const wppform = document.getElementById('wppform');
+
+wppform.addEventListener('submit', (e) => {
+	e.preventDefault();
+	e.stopPropagation();
+	e.stopImmediatePropagation();
+
+	const user = document.getElementById('name');
+	const phone_number = document.getElementById('phone');
+	const fecha =  document.getElementById('date');
+	const hora = document.getElementById('time');
+	const mensaje = document.getElementById('comment');
+
+	const phone = '5492216385542';      
+let msg = 'Hola! Quiero sacar un turno en la barberia:\n';
+	msg += '*Nombre:* ' + user.value + "\n";
+	 msg += '*Telefono:* ' + phone_number.value + "\n"
+	 msg += '*Fecha:* ' + fecha.value + "\n"
+	 msg += '*Hora:* ' + hora.value + "\n"
+	 msg += '*Mensaje:* ' + mensaje.value + "\n"
+
+
+	
+	
+   
+
+	const wppLink = `send?text=${encodeURIComponent(msg)}&phone=${phone}&type=phone_number&app_absent=0`;
+	console.log(wppLink);
+
+	if (
+		navigator.userAgent.match(/Android/i) ||
+		navigator.userAgent.match(/BlackBerry/i) ||
+		navigator.userAgent.match(/iPhone|iPad|iPod/i) ||
+		navigator.userAgent.match(/Opera Mini/i) ||
+		navigator.userAgent.match(/IEMobile/i)
+	) {
+		window.location.href = 'whatsapp://' + wppLink;
+	} else {
+		window.open('https://web.whatsapp.com/' + wppLink);
+	}
+
+	return false;
+});
+
+
+
+
+
+
+
 (function($) {
 	"use strict";
 	var menuBreakPoint = 991;

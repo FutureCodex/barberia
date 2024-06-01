@@ -686,7 +686,7 @@
 </div>
 </div>
 <div class="text-center pt-15px pb-15px border-top border-color-transparent-white-light">
-<a href="https://maps.google.com/maps?ll=-37.805688,144.962312&amp;z=17&amp;t=m&amp;hl=en-US&amp;gl=IN&amp;mapclient=embed&amp;cid=13153204942596594449" target="_blank" class="btn btn-link btn-hover-animation-switch btn-extra-large text-white text-uppercase btn-icon-left fw-400 p-0">
+<a href="https://maps.app.goo.gl/mB6mrpa6UJtHATnZA" target="_blank" class="btn btn-link btn-hover-animation-switch btn-extra-large text-white text-uppercase btn-icon-left fw-400 p-0">
 <span>
 <span class="btn-text">Ver ubicación en google maps</span>
 <span class="btn-icon"><i class="feather icon-feather-map-pin"></i></span>
@@ -720,39 +720,29 @@
 <div class="col-xl-8 col-lg-7">
 <div class="contact-form-style-05">
 
-<form action="email-templates/contact-form.php" method="post">
+<form id="wppform" action="#">
 <div class="row justify-content-center">
 <div class="col-md-6 sm-mb-20px">
-<input class="mb-20px border-color-transparent-dark-very-light form-control bg-transparent required" type="text" name="name" placeholder="Tu nombre*" />
-<input class="mb-20px border-color-transparent-dark-very-light form-control bg-transparent required" type="phone" name="phone" placeholder="Tu numero de teléfono*" />
+<input class="mb-20px border-color-transparent-dark-very-light form-control bg-transparent required" type="text" name="name" id="name" placeholder="Tu nombre*" required>
+<input class="mb-20px border-color-transparent-dark-very-light form-control bg-transparent required" type="phone" name="phone" id="phone" placeholder="Tu numero de teléfono*" required>
 <div class="date-time row gutter-very-small">
 <div class="date-icon col-xl-6 lg-mb-25px">
-<input class="form-control border-color-transparent-dark-very-light bg-transparent" type="date" name="date" value="2023-01-01" min="2023-01-01" max="2099-12-31" />
+<input class="form-control border-color-transparent-dark-very-light bg-transparent" type="date" name="date" id="date" value="2023-01-01" min="2023-01-01" max="2099-12-31" required>
 </div>
 <div class="time-icon col-xl-6">
-<input class="form-control border-color-transparent-dark-very-light bg-transparent" type="time" name="time" value="09:12" min="09:00" max="12:00" />
+<input class="form-control border-color-transparent-dark-very-light bg-transparent" type="time" name="time" id="time" value="09:12" min="09:00" max="12:00" required>
 </div>
 </div>
 </div>
 <div class="col-md-6">
-<div class="mb-20px select">
-<select class="form-control border-color-transparent-dark-very-light bg-transparent" name="select">
-<option value>Seleccioná que servicio deseas</option>
-<option value="Corte">Corte</option>
-<option value="Barba">Barba</option>
-<option value="Corte y Barba">Corte y Barba</option>
-<option value="Color">Color</option>
-<option value="Diseño Personalizado">Diseño Personalizado</option>
-</select>
-</div>
-<textarea class="form-control border-color-transparent-dark-very-light bg-transparent h-140px" cols="20" rows="4" name="comment" placeholder="Deja tu Mensaje"></textarea>
+<textarea class="form-control border-color-transparent-dark-very-light bg-transparent h-140px" cols="20" rows="4"  type="text" name="comment" id="comment"  placeholder="Deja tu Mensaje" required></textarea>
 </div>
 <div class="col-md-6 mt-30px sm-mt-20px">
 <p class="fs-14 lh-22 opacity-7 text-center text-md-start mb-0">Protegemos tu Privacidad. Todos tus datos están seguros</p>
 </div>
 <div class="col-md-6 text-center text-md-end mt-30px sm-mt-20px">
 <input class="bg-transparent" type="hidden" name="redirect" value>
-<button class="btn btn-large btn-round-edge btn-box-shadow btn-switch-text btn-dark-gray left-icon submit w-100" type="submit">
+<button class="btn btn-large btn-round-edge btn-box-shadow btn-switch-text btn-dark-gray left-icon w-100" type="submit">
 <span>
 <span><i class="feather icon-feather-calendar"></i></span>
 <span class="btn-double-text" data-text="Reservar turno">Reservar turno</span>
@@ -764,7 +754,6 @@
 </div>
 </div>
 </form>
-
 </div>
 </div>
 </div>
